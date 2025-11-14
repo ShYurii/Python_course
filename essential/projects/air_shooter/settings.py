@@ -1,0 +1,38 @@
+import os
+
+WIDTH = 800
+HEIGHT = 600
+FPS = 60
+CAPTION = "Air Shooter"
+
+RED = (255, 0, 0)
+YELLOW = (255, 255, 0)
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+SKY = (135, 206, 235)
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+ASSETS_DIR = os.path.join(BASE_DIR, "assets")
+IMAGES_DIR = os.path.join(ASSETS_DIR, "images")
+SOUNDS_DIR = os.path.join(ASSETS_DIR, "sounds")
+
+PLANE_WIDTH = 60
+PLANE_HEIGHT = 40
+PLANE_X = 100
+GRAVITY = 0.5
+LIFT = -0.5
+MAX_FALL_SPEED = 10
+MAX_RISE_SPEED = -8
+
+BULLET_WIDTH = 10
+BULLET_HEIGHT = 10
+BULLET_SPEED = 10
+
+ENEMY_WIDTH = 50
+ENEMY_HEIGHT = 40
+ENEMY_BULLET_WIDTH = 10
+ENEMY_BULLET_HEIGHT = 10
+ENEMY_BULLET_SPEED = 6
+
+BONUS_WIDTH = 30
+BONUS_HEIGHT = 30
