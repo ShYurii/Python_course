@@ -9,7 +9,6 @@ class Database:
 
     async def connect(self):
         self._conn = await aiosqlite.connect(self.path)
-        # чтобы получать словари, можно использовать row_factory
         self._conn.row_factory = aiosqlite.Row
         await self._create_tables()
 
@@ -61,9 +60,7 @@ class Database:
 
     # ---- locations ----
     async def save_location(self, telegram_id: int, label: str, lat: float, lon: float, name: Optional[str] = None):
-        """
-        Сохраняет локацию. Если уже есть запись с same (telegram_id, label) — заменяет.
-        """
+
         assert self._conn is not None
         now = datetime.datetime.utcnow().isoformat()
         await self._conn.execute("""
