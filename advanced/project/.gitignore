@@ -1,0 +1,5 @@
+/elementary/project/
+.env
+forecast.db
+requirements.txt
+info
